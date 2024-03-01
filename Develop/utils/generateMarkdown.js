@@ -1,19 +1,41 @@
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {}
-
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
-function renderLicenseLink(license) {}
-
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseBadge(license) {
+  if (license !== "none") {
+    return  `![![Github license](https://img.shields.io/badge/license-${license}-blue.svg)`;
+  }
+  return "";
+}
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
-
+  ${renderLicenseBadge(data.license)}
+  ## Description
+  ${data.description}
+  ## Deployed Application URL
+  ${data.link}
+  ## Screenshot
+  ![alt-text] (${data.screenshot})
+  ##Table of Contents
+  * [Features](#features)
+  * [Languages & Dependecies](#languagesanddependencies)
+  * [How to use application] (#how to use application)
+  * [Sources] (#sources)
+  * [Test] (#test)
+  * [Questions] (#questions)
+  ## Features
+  ${data.features}
+  ##Languages & Dependecies
+  ${data.require}
+  ## How to Use Application
+  ${data.usage}
+  ## Sources 
+  ${data.sources}
+  ##Testing 
+  ${data.test}
+  ##Questions 
+  Further questions send them [here](mailto:${data.email}?subject=[GitHub%20Dev20Connect])
 `;
 }
 
