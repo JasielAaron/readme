@@ -2,7 +2,7 @@
 // If there is no license, return an empty string
 function renderLicenseBadge(license) {
   if (license !== "none") {
-    return  `![![Github license](https://img.shields.io/badge/license-${license}-blue.svg)`;
+    return  `![Github license](https://img.shields.io/badge/license-${license}-blue.svg)`;
   }
   return "";
 }
@@ -10,32 +10,57 @@ function renderLicenseBadge(license) {
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
   return `# ${data.title}
+
   ${renderLicenseBadge(data.license)}
+
   ## Description
+
   ${data.description}
+
   ## Deployed Application URL
+  
   ${data.link}
+
   ## Screenshot
-  ![alt-text] (${data.screenshot})
-  ##Table of Contents
+  ![alt-text](${data.screenshot})
+
+  ## Table of Contents
+
   * [Features](#features)
   * [Languages & Dependecies](#languagesanddependencies)
-  * [How to use application] (#how to use application)
-  * [Sources] (#sources)
-  * [Test] (#test)
-  * [Questions] (#questions)
+  * [Usage](#usage)
+  * [Installation](#installation)
+  * [Sources](#sources)
+  * [Test](#test)
+  * [Questions](#questions)
+  
   ## Features
+
   ${data.features}
-  ##Languages & Dependecies
+
+  ## Languages & Dependecies
+
   ${data.require}
-  ## How to Use Application
+
+  ## Usage
+
   ${data.usage}
+
+  ## Installation
+
+  ${data.installation}
+
   ## Sources 
+
   ${data.sources}
-  ##Testing 
+
+  ## Testing 
+
   ${data.test}
-  ##Questions 
-  Further questions send them [here](mailto:${data.email}?subject=[GitHub%20Dev20Connect])
+
+  ## Questions 
+
+  Further questions send them [${data.email}](mailto:${data.email}?subject=[GitHub%20Dev20Connect])
 `;
 }
 

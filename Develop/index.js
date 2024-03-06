@@ -3,7 +3,7 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
 const path = require("path");
-const generateMarkdown = require(" ./utils/generateMarkdown");
+const generateMarkdown = require("./utils/generateMarkdown");
 // TODO: Create an array of questions for user input
 const questions = [
   {
@@ -17,7 +17,7 @@ const questions = [
     message: "Describe the purpose of your project.",
   },
   {
-    type: "checkbox",
+    type: "list",
     name: "license",
     message: "Please select what licensed are going to be used in this project",
     choices: ["MIT", "APACHE2.8", "Boost1.0", "MPL2.0","BSD2","BSD3","none"],
@@ -60,11 +60,31 @@ const questions = [
   message: "Please provide any test required if applicable.",
 
 },
+{
+  type: "input",
+  name: "link",
+  message: "please provide link to your project"
+},
+{
+  type: "input",
+  name: "screenshot",
+  message: "please provide a link to your screenshot"
+},
+{
+  type: "input",
+  name: "features",
+  message: "What features does your project provide?"
+},
+{
+  type: "input",
+  name: "installation",
+  message: "What are your installation instructions?",
+}
 ];
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-  return fs.writeFileSync(path.join(process.cwd(). fileName). data);
+  return fs.writeFileSync(path.join(__dirname, fileName), data);
 }
 
 // TODO: Create a function to initialize app
