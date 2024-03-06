@@ -1,17 +1,17 @@
-# README DEV
+# READ ME DEVELOPER
 
   ![Github license](https://img.shields.io/badge/license-MIT-blue.svg)
 
   ## Description
 
-  To generate a README
+  TO Generate a Read Me
 
   ## Deployed Application URL
   
-  blah.com
+  https://jasielaaron.github.io/readme/
 
   ## Screenshot
-  ![alt-text](blla)
+  ![alt-text](no screenshots)
 
   ## Table of Contents
 
@@ -25,11 +25,11 @@
   
   ## Features
 
-  generates a read me
+  This application will let you generate a read me you can attack any and all of the depencies, languages used to get your application up and running
 
   ## Languages & Dependecies
 
-  None
+  none
 
   ## Usage
 
@@ -37,15 +37,15 @@
 
   ## Installation
 
-  blaj
+  Go to your index.js and click open in intergrated terminal, after that run node index.js and start filling out the question the read me will generate for you!
 
   ## Sources 
 
-  Youtube, Bobby
+  Youtube and the amazing Bobby!
 
   ## Testing 
 
-  none
+  No test required
 
   ## Questions 
 
